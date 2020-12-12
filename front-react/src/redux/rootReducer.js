@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
 
-const rootReducer = combineReducers({
+import loadingReducer from './loading/loadingReducer'
 
+const rootReducer = combineReducers({
+  loadingReducer
 })
 
 export default rootReducer
