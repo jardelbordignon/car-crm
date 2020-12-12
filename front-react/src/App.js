@@ -1,9 +1,9 @@
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { blue } from '@material-ui/core/colors'
-import { Button, TextField } from '@material-ui/core'
-import { MdPayment } from 'react-icons/md'
+import { Provider as ReduxProvider } from 'react-redux'
 
 import Routes from './Routes'
+import { store } from './redux/store'
 
 const theme = createMuiTheme({
   palette: {
@@ -25,8 +25,10 @@ const theme = createMuiTheme({
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Routes />
-    </ThemeProvider>
+    <ReduxProvider store={store}>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </ReduxProvider>
   )
 }
