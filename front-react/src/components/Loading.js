@@ -12,7 +12,7 @@ export default function Loading() {
       onClose={() => dispatch( changeLoading({open: false}) )}
       className='d-flex flex-center h-100'>
       
-      <div className='bg-white d-flex align-items-center rounded-2 p-3 outline-0'>
+      <div className='bg-white d-flex align-items-center rounded-2 p-3'>
         <CircularProgress size={25} className='mr-2' />
         <Typography variant='subtitle1'>{loading.msg}</Typography>
       </div>

@@ -36,6 +36,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: 0;
 }
 
 body {
@@ -53,9 +54,14 @@ body {
 
 
 /* Backgroud colors */
-.bg-white {
-  background-color: #fff;
-}
+.bg-white { background-color: var(--bs-white); }
+.bg-danger { background-color: var(--bs-danger); }
+
+/* Text Color */
+.text-info { color: var(--bs-info); }
+.text-success { color: var(--bs-success); }
+.text-warning { color: var(--bs-warning); }
+.text-danger { color: var(--bs-danger); }
 
 /* Border Radius */
 .rounded-2 {
@@ -90,11 +96,11 @@ body {
   padding: 5rem;
 }
 
-.d-flex {
-  display: flex;
-}
 
 /* Margin */
+.mr-1 {
+  margin-right: 0.5rem;
+}
 .mr-2 {
   margin-right: 1rem;
 }
@@ -102,15 +108,16 @@ body {
   margin-right: 1.8rem;
 }
 
-/* Outline */
-.outline-0 {
-  outline: 0;
-}
-
 /* Structure */
+.d-flex {
+  display: flex !important;
+}
+.flex-column {
+  flex-direction: column;
+}
 .flex-center {
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .justify-content-center {
