@@ -41,9 +41,10 @@ export const signin = credentials => dispatch => {
     dispatch( changeLoading({open: false}) )
 
     if (typeof error.response !== 'undefined') {
-      const msgText = (error.response.status.includes([400, 401])) 
+      const msgText = ([400, 401].includes(error.response.status)) 
         ? 'E-mail e/ou senha incorretos'
         : 'Erro ao conectar com o servidor'
+        console.log(msgText)
       
       dispatch( changeNotify({ open: true, msgText, msgClass: 'danger' }) )
     }

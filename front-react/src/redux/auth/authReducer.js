@@ -1,7 +1,7 @@
 import { actionTypes } from './authActions'
 
 const initialState = {
-  credentials: {},
+  credentials: { email:'', password:'' },
   success: false
 }
 
