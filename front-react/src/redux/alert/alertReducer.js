@@ -1,14 +1,16 @@
-import { actionTypes } from './loadingActions'
+import { actionTypes } from './alertActions'
 
 const initialState = {
   open: false,
-  msg: 'Carregando ...'
+  time: 3000,
+  msgClass: 'info',
+  msgText: ''
 }
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
 
-  case actionTypes.CHANGE_LOADING:
+  case actionTypes.CHANGE_ALERT:
     return { ...state, ...payload }
 
   default:
