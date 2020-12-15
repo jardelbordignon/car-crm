@@ -1,6 +1,6 @@
 import { Typography, TextField, Button } from '@material-ui/core'
 import { useSelector, useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 import { changeAuth, signin, successAuth } from '../redux/auth/authActions'
 
@@ -43,7 +43,17 @@ export default function SignIn() {
               Entrar
             </Button>
 
-            { success && <Redirect to='/' /> }
+            <div className='text-center'>
+              Esqueceu a senha?
+              <Link className='link-primary' to='/signup'> Recuperar acesso</Link>
+            </div>
+            <br/>
+            <div className='text-center'>
+              Não tem cadastro?
+              <Link className='link-primary' to='/signup'> Criar um conta</Link>
+            </div>
+
+            { success && <Redirect to='/vehicles' /> }
           </div>
         </div>
       </div>

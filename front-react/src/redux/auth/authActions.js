@@ -17,7 +17,7 @@ export const successAuth = payload => ({
 
 export const setUserToken = token => dispatch => {
   localStorage.setItem('access_token', token)
-  dispatch( changeAuth({ email:'', password:'' }) )
+  dispatch( changeAuth({ name:'', email:'', password:'' }) )
   dispatch( successAuth(true) )
 }
 
