@@ -13,6 +13,7 @@ const Routes = () => (
         <Route path='/' exact component={Home} />
         <Route path='/signin' component={SignIn} />
         <Route path='/signup' component={SignUp} />
+        <Route path='/vehicles' component={SignUp} />
       </Switch>
     </Suspense>
   </BrowserRouter>

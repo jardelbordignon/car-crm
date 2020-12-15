@@ -22,6 +22,8 @@ export default function Notify() {
   const notifyReducer = useSelector( state => state.notifyReducer )
   const { open, horizontal, vertical, time, msgClass, msgText } = notifyReducer
   const classes = useStyles()
+
+  const klass = msgClass==='danger' ? 'error' : msgClass
   
   return (
     <Snackbar
@@ -31,7 +33,7 @@ export default function Notify() {
       onClose={() => dispatch( changeNotify({open: false}) )}>
 
       <SnackbarContent
-        className={`${classes[msgClass]} d-flex  justify-content-center`}
+        className={`${classes[klass]} d-flex  justify-content-center`}
         message={<span>{msgText}</span>} />
 
     </Snackbar>
