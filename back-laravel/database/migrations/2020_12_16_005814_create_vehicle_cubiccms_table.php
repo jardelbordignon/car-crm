@@ -17,6 +17,7 @@ class CreateVehicleCubiccmsTable extends Migration
             $table->id();
             $table->string('label')->nullable();
             $table->bigInteger('value')->nullable();
+            $table->smallInteger('vehicle_type_id')->nullable();
             $table->timestamps();
         });
     }
