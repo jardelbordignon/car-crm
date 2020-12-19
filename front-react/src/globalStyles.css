@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #eee;
   /* font-size: 62.5% !important; */
 }
 
@@ -20,6 +21,19 @@ button {
 .flex-center {
   justify-content: center !important;
   align-items: center !important;
+}
+
+.label-custom {
+  color: #2c2c31;
+  font-weight: 600;
+  font-family: 'Open Sans' sans-serif;
+}
+
+.card {
+  background-color: rgb(255,255,255);
+  box-shadow: rgba(153, 153, 153, .2) 0 2px 4px 0;
+  border-radius: 3px;
+  border: none;
 }
 
 .header {

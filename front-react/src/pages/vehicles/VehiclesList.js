@@ -1,6 +1,6 @@
-import Header from '../components/Header'
+import Header from '../../components/Header'
 
-export default function Vehicles() {
+export default function VehiclesList() {
   return (
     <div>
       <Header title='Veículos' />
